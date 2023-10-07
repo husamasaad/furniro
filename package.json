@@ -1,0 +1,29 @@
+{
+  "name": "furniture",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@sanity/image-url": "^1.0.2",
+    "@sanity/vision": "^3.17.0",
+    "next": "13.5.4",
+    "next-auth": "^4.23.2",
+    "next-sanity": "^5.5.5",
+    "nextjs13-progress": "^1.1.45",
+    "react": "^18",
+    "react-dom": "^18",
+    "react-hot-toast": "^2.4.1",
+    "sanity": "^3.17.0",
+    "styled-components": "5.2"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10",
+    "postcss": "^8",
+    "tailwindcss": "^3"
+  }
+}
