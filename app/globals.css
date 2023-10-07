@@ -30,7 +30,7 @@
   }
 
   .base-bold {
-    @apply text-[24px] font-semibold leading-[31.2px];
+    @apply text-[24px] font-bold leading-[31.2px];
   }
 
   .paragraph-regular {
@@ -104,12 +104,14 @@
   .custom-btn {
     @apply py-6 px-[72px] text-[16px] uppercase font-bold flex-center cursor-pointer transition-all
   }
-  
   .btn-fill {
     @apply custom-btn border border-primary bg-primary text-white
   }
   .btn-outline {
     @apply custom-btn border border-primary text-primary bg-transparent
+  }
+  .btn-outline-black {
+    @apply custom-btn border
   }
   .btn-fill-white {
     @apply custom-btn bg-white text-primary

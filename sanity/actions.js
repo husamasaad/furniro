@@ -21,3 +21,21 @@ export const getHeroInfo = async () => {
     console.log(error);
   }
 }
+
+export const getUsers = async () => {
+  try {
+    const info = await client.fetch(
+      groq`*[_type == "hero"]{
+        _id
+        username,
+        password,
+        email,
+        history,
+      }`
+    );
+
+    return info;
+  } catch (error) {
+    console.log(error);
+  }
+}

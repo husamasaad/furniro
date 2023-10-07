@@ -8,6 +8,8 @@ import { useStateContext } from '@/context/ContextProvider'
 import Cart from './Cart'
 import Profile from './Profile'
 import FavList from './FavList'
+import { RxAvatar, RxMagnifyingGlass, RxHeart } from 'react-icons/rx'
+import { AiOutlineShoppingCart } from 'react-icons/ai'
 
 const NavbarButtons = () => {
 
@@ -16,17 +18,17 @@ const NavbarButtons = () => {
   return (
     <>
       <div className='flex-center gap-6 md:gap-12'>
-        <button onClick={() => setActiveProfile(true)} type='button' className='hidden md:block'>
-          <Image src="/profile-icon.svg" width={28} height={28} alt='menu icon' className='object-contain'/>
+        <button onClick={() => setActiveProfile(true)} type='button' className='hidden md:block text-3xl hover:text-primary'>
+          <RxAvatar />
         </button>
-        <button type='button' className='hidden md:block'>
-          <Image src="/search-icon.svg" width={28} height={28} alt='menu icon' className='object-contain'/>
+        <button type='button' className='hidden md:block text-3xl hover:text-primary'>
+          <RxMagnifyingGlass />
         </button>
-        <button onClick={() => setActiveFavList(true)} type='button' className='hidden md:block'>
-          <Image src="/heart-icon.svg" width={28} height={28} alt='menu icon' className='object-contain'/>
+        <button onClick={() => setActiveFavList(true)} type='button' className='hidden md:block text-3xl hover:text-primary'>
+          <RxHeart />
         </button>
-        <button onClick={() => setActiveCart(true)} type='button'>
-          <Image src="/cart-icon.svg" width={28} height={28} alt='menu icon' className='object-contain'/>
+        <button onClick={() => setActiveCart(true)} type='button' className='text-3xl hover:text-primary'>
+          <AiOutlineShoppingCart />
         </button>
       </div>
       <button type='button' onClick={() => setActiveMenu(true)} className='md:hidden'>

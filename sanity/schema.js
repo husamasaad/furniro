@@ -1,5 +1,7 @@
 import heroInfo from './schemas/heroInfo'
+import products from './schemas/products'
+import users from './schemas/users'
 
 export const schema = {
-  types: [heroInfo],
+  types: [heroInfo, products, users],
 }

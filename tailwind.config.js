@@ -16,7 +16,7 @@ module.exports = {
       colors: {
         'primary' : '#B88E2F',
         'secondary': '#FFF3E3',
-        'ligh-bg': '#F4FSF7',
+        'light-bg': '#F4F5F7',
         'font-clr': '#333',
         'font-clr-1': '#666',
         'color-gray-1': '#3A3A3A',
@@ -25,6 +25,7 @@ module.exports = {
         'color-gray-4': '#8B0B0B0',
         'color-gray-5': '#9F9F9F',
       },
+
 
     },
   },

@@ -15,7 +15,7 @@ const Hero = async () => {
       <Image src={image} fill className="w-full h-full object-cover absolute inset-0 -z-10" priority />
       <div className="paddings flex-center">
         <div className="p-12 bg-secondary">
-          <div className="flex gap-2 flex-col">
+          <div className="flex gap-4 md:gap-2 flex-col">
             <span className="body-text text-font-clr uppercase tracking-[2px] pl-1">{smallSpan}</span>
             <h1 className="heading1 text-primary max-w-lg">{heading}</h1>
             <p className="paragraph-regular text-font-clr max-w-2xl">{description}</p>

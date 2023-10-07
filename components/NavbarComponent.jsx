@@ -10,7 +10,7 @@ const NavbarComponent = () => {
   return (
     <nav className='bg-white x-paddings py-8'>
       <div className="flex-between flex-wrap gap-y-6 mx-auto">
-        <Link className=''>
+        <Link href='/'>
           <Image src="/logo.png" alt="logo" width={158} height={40} className='object-contain h-6 sm:h-9 w-fit mx-auto' />
         </Link>
         <ul className='hidden md:flex-center gap-12'>

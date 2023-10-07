@@ -1,6 +1,7 @@
 'use client'
 
 import { useStateContext } from '@/context/ContextProvider'
+import { signIn } from 'next-auth/react'
 import Image from 'next/image'
 import { Link } from 'nextjs13-progress'
 import { useState } from 'react'
@@ -12,11 +13,27 @@ const Profile = () => {
   return (
     <>
       <div className='absolute bg-black/70  min-h-screen w-screen top-0 right-0 z-50 transition-all' />
-      <div className='absolute w-96 pt-10 max-w-full bg-white text-slate-100 right-0 top-0 z-50 transition-all max-h-screen overflow-y-scroll'>
-        <button className='text-5xl block absolute right-5 top-5' onClick={() => setActiveProfile(false)}>
-          <Image src="/delete-icon.svg" alt="close" width={28} height={28} />
-        </button>
+      <div className='absolute w-[417px] pt-10 max-w-full bg-white text-slate-100 right-0 top-0 z-50 transition-all max-h-screen overflow-y-scroll'>
+        <div className='flex-between px-10'>
+          <h2 className='base-bold text-black'>User Profile</h2>
+          <button className='text-5xl' onClick={() => setActiveProfile(false)}>
+            <Image src="/delete-icon.svg" alt="close" width={28} height={28} />
+          </button>
+        </div>
+        <div className='border-t mt-10 p-10 flex-between flex-col min-h-[70vh]'>
+          <div className='flex-1'>
+            <p className='text-center body-semibold text-color-gray-3'>You are not logged in <br /> sign in or create a new acount for free</p>
+          </div>
+          <div className='border-t mt-5 pt-5 w-full flex-between flex-wrap gap-y-4'>
+            <button type='button' onClick={() => signIn()}  className='border border-black py-2 px-6 rounded-full text-color-gray-1'>
+              Sign In
+            </button>
+            <button className='border border-black py-2 px-6 rounded-full text-color-gray-1'>
+              Create an Account
+            </button>
+          </div>
 
+        </div>
       </div>
     </>
   )
