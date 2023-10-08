@@ -25,8 +25,23 @@ const users = {
       title: 'Purchase History',
       type: 'array',
       of: [
-        products
-      ]
+        {
+          name: 'purchased products',
+          type: 'document',
+          fields: [
+            {
+              name: 'productTitle',
+              title: 'Product Title',
+              type: 'string'
+            },
+            {
+              name: 'productIds',
+              title: 'Product Id',
+              type: 'string'
+            }
+          ]
+        }
+      ],
     }
   ]
 }

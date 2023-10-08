@@ -1,6 +1,5 @@
 'use client';
 
-import { Dropdown, Navbar } from 'flowbite-react';
 import Image from 'next/image';
 import { Link } from 'nextjs13-progress';
 import NavbarButtons from './NavbarButtons';

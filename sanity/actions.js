@@ -25,7 +25,7 @@ export const getHeroInfo = async () => {
 export const getUsers = async () => {
   try {
     const info = await client.fetch(
-      groq`*[_type == "hero"]{
+      groq`*[_type == "users"]{
         _id
         username,
         password,

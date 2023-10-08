@@ -98,7 +98,7 @@
   }
   
   .no-focus {
-    @apply focus-visible:ring-0 focus-visible:ring-transparent focus-visible:ring-offset-0 !important;
+    @apply focus-visible:ring-0 focus-visible:ring-transparent focus-visible:ring-offset-0 focus:outline-none !important;
   }
 
   .custom-btn {

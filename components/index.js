@@ -8,7 +8,9 @@ import FavList from './FavList'
 import Cart from './Cart'
 import NavbarButtons from './NavbarButtons'
 import Profile from './Profile'
+import Gallary from './Gallary'
 import ProductSection from './ProductSection'
+import GallaryCarousel from './GallaryCarousel'
 
 
 export {
@@ -20,5 +22,7 @@ export {
   Cart,
   NavbarButtons,
   Profile,
-  ProductSection
+  ProductSection,
+  Gallary,
+  GallaryCarousel,
 }

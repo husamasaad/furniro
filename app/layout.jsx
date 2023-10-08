@@ -1,5 +1,7 @@
-import { NavbarComponent } from '@/components'
 import './globals.css'
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+
+import { NavbarComponent } from '@/components'
 import { ContextProvider } from '@/context/ContextProvider'
 import { Next13NProgress } from 'nextjs13-progress'
 

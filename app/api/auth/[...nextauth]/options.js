@@ -22,8 +22,9 @@ export const options = {
       async authorize(credentials) {
         const users = await getUsers()
         const user = users?.find(user => (credentials?.email === user.email && credentials?.password === user.password));
-      
+
         console.log(users);
+        
         if(user) {
           return user
         } else {
