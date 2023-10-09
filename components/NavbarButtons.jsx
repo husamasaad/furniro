@@ -8,7 +8,7 @@ import { useStateContext } from '@/context/ContextProvider'
 import Cart from './Cart'
 import Profile from './Profile'
 import FavList from './FavList'
-import { RxAvatar, RxMagnifyingGlass, RxHeart } from 'react-icons/rx'
+import { RxAvatar, RxMagnifyingGlass, RxHeart, RxHamburgerMenu } from 'react-icons/rx'
 import { AiOutlineShoppingCart } from 'react-icons/ai'
 
 const NavbarButtons = () => {
@@ -32,7 +32,7 @@ const NavbarButtons = () => {
         </button>
       </div>
       <button type='button' onClick={() => setActiveMenu(true)} className='md:hidden'>
-        <Image src="icon-hamburger.svg" width={28} height={28} alt='menu icon' className='object-contain'/>
+      <RxHamburgerMenu className='text-3xl'/>
       </button>
       { activeMenu && <Menu /> }
       { activeCart && <Cart /> }

@@ -102,7 +102,7 @@
   }
 
   .custom-btn {
-    @apply py-6 px-[72px] text-[16px] uppercase font-bold flex-center cursor-pointer transition-all
+    @apply py-6 px-12 md:px-[72px] text-[16px] uppercase font-bold flex-center cursor-pointer transition-all rounded-md
   }
   .btn-fill {
     @apply custom-btn border border-primary bg-primary text-white
@@ -118,5 +118,8 @@
   }
   .btn-fill-secondary {
     @apply custom-btn bg-secondary text-primary bg-transparent
+  }
+  .btn-navigation {
+    @apply border-primary cursor-pointer transition-all hover:bg-primary hover:text-white font-bold uppercase bg-[#F9F1E7] text-color-gray-1 py-4 px-6 rounded-lg
   }
 }

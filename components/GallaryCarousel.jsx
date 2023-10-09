@@ -3,40 +3,8 @@ import React, { useState } from 'react';
 import Image from 'next/image'
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
-import { FaChevronRight, FaDotCircle } from 'react-icons/fa'
-import { AiOutlineArrowRight } from 'react-icons/ai'
-import { BsDropletFill } from 'react-icons/bs'
 
-
-const images = [
-  {
-    id: 0,
-    srcUrl: '/gallary1.png',
-    tag: 'Bedroom',
-    title: 'Inner Piece'
-  },
-  {
-    id: 1,
-    srcUrl: '/gallary2.png',
-    tag: 'Bedroom',
-    title: 'Inner Piece'
-  },
-  {
-    id: 2,
-    srcUrl: '/dining.png',
-    tag: 'Bedroom',
-    title: 'Inner Piece'
-  },
-  {
-    id: 3,
-    srcUrl: '/living.png',
-    tag: 'Bedroom',
-    title: 'Inner Piece'
-  },
-]
-
-
-const GallaryCarousel = () => {
+const GallaryCarousel = ({ images }) => {
 
 
   const [imagesList, setImagesList] = useState(images)

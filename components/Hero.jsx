@@ -20,7 +20,7 @@ const Hero = async () => {
             <h1 className="heading1 text-primary max-w-lg">{heading}</h1>
             <p className="paragraph-regular text-font-clr max-w-2xl">{description}</p>
           </div>
-          <Link href={prodectLink} className="btn-fill w-fit mt-20 hover:btn-outline">Buy Now</Link>
+          <Link href={prodectLink} className="btn-fill w-full sm:w-fit mt-20 hover:btn-outline">Buy Now</Link>
         </div>
       </div>
       

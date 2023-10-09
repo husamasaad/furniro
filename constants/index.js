@@ -7,7 +7,7 @@ export const ourProducts = [
     title: 'Syltherine',
     subtitle: 'Stylish cafe chair',
     price: 2500000,
-    new: false,
+    isNew: false,
     discount: 0.5,
     image: '/product1.png'
   },
@@ -16,7 +16,7 @@ export const ourProducts = [
     title: 'Leviosa',
     subtitle: 'Stylish cafe chai',
     price: 2500000,
-    new: false,
+    isNew: true,
     discount: 0,
     image: '/product8.png'
   },
@@ -25,7 +25,7 @@ export const ourProducts = [
     title: 'Lolito',
     subtitle: 'Luxury big sofa',
     price: 7000000,
-    new: false,
+    isNew: false,
     discount: 0.5,
     image: '/product2.png'
   },
@@ -34,7 +34,7 @@ export const ourProducts = [
     title: 'Respira',
     subtitle: 'Outdoor bar table and stool',
     price: 500000,
-    new: true,
+    isNew: true,
     discount: 0,
     image: '/product3.png'
   },
@@ -43,7 +43,7 @@ export const ourProducts = [
     title: 'Grifo',
     subtitle: 'Night lamp',
     price: 1500000,
-    new: false,
+    isNew: false,
     discount: 0,
     image: '/product4.png'
   },
@@ -52,7 +52,7 @@ export const ourProducts = [
     title: 'Muggo',
     subtitle: 'Small mug',
     price: 150000,
-    new: true,
+    isNew: true,
     discount: 0,
     image: '/product5.png'
   },
@@ -61,7 +61,7 @@ export const ourProducts = [
     title: 'Pingky',
     subtitle: 'Cute bed set',
     price: 7000000,
-    new: false,
+    isNew: false,
     discount: 0.5,
     image: '/product6.png'
   },
@@ -70,8 +70,86 @@ export const ourProducts = [
     title: 'Patty',
     subtitle: 'Minimalist flower pot',
     price: 500000,
-    new: true,
+    isisNew: true,
     discount: 0,
     image: '/product7.png'
+  },
+]
+
+
+export const footerLinks = [
+  {
+    id: 0,
+    title: 'Links',
+    links: [
+      {
+        id: 0,
+        name: 'Home',
+        url: '/'
+      },
+      {
+        id: 2,
+        name: 'Shop',
+        url: '/shop'
+      },
+      {
+        id: 3,
+        name: 'About',
+        url: '/'
+      },
+      {
+        id: 4,
+        name: 'Contact',
+        url: '/contact'
+      },
+    ]
+  },
+  {
+    id: 1,
+    title: 'Help',
+    links: [
+      {
+        id: 0,
+        name: 'Payment Options',
+        url: '/'
+      },
+      {
+        id: 2,
+        name: 'Returns',
+        url: '/'
+      },
+      {
+        id: 3,
+        name: 'Privacy Policies',
+        url: '/'
+      },
+    ]
+  },
+]
+
+export const featuresList = [
+  {
+    id: 0,
+    title: 'High Quality',
+    details: 'crafted from top materials',
+    imageUrl: '/trophy-icon.svg'
+  },
+  {
+    id: 1,
+    title: 'Warranty Protection',
+    details: 'Over 2 years',
+    imageUrl: '/guarantee-icon.svg'
+  },
+  {
+    id: 2,
+    title: 'Free Shipping',
+    details: 'crafted from top materials',
+    imageUrl: '/shipping-icon.svg'
+  },
+  {
+    id: 3,
+    title: '24 / 7 Support',
+    details: 'Dedicated support',
+    imageUrl: '/support-icon.png'
   },
 ]

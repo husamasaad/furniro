@@ -2,6 +2,33 @@ import { Link } from 'nextjs13-progress'
 import React from 'react'
 import GallaryCarousel from './GallaryCarousel'
 
+const images = [
+  {
+    id: 0,
+    srcUrl: '/gallary1.png',
+    tag: 'Bedroom',
+    title: 'Inner Piece'
+  },
+  {
+    id: 1,
+    srcUrl: '/gallary2.png',
+    tag: 'Bedroom',
+    title: 'Inner Piece'
+  },
+  {
+    id: 2,
+    srcUrl: '/dining.png',
+    tag: 'Bedroom',
+    title: 'Inner Piece'
+  },
+  {
+    id: 3,
+    srcUrl: '/living.png',
+    tag: 'Bedroom',
+    title: 'Inner Piece'
+  },
+]
+
 const Gallary = () => {
   return (
     <section className='paddings bg-[#FCF8F3] relative'>
@@ -15,7 +42,7 @@ const Gallary = () => {
           </div>
           <Link href="/" className="btn-fill w-full sm:w-fit mt-10 hover:btn-outline">Explore More</Link>
         </div>
-        <GallaryCarousel />
+        <GallaryCarousel images={images} />
       </div>
     </section>
   )

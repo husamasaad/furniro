@@ -16,11 +16,11 @@ const NavbarComponent = () => {
             <li className='body-text text-font-clr hover:text-primary'>
               <Link href='/'>Home</Link> </li>
             <li className='body-text text-font-clr hover:text-primary'>
-              <Link href='/'>Shop</Link> </li>
+              <Link href='/shop'>Shop</Link> </li>
             <li className='body-text text-font-clr hover:text-primary'>
-              <Link href='/'>About</Link> </li>
+              <Link href='/about'>About</Link> </li>
             <li className='body-text text-font-clr hover:text-primary'>
-              <Link href='/'>Contact</Link></li>
+              <Link href='/contact'>Contact</Link></li>
         </ul>
         <div className='flex gap-6'>
           <NavbarButtons />

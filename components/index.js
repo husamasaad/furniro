@@ -11,6 +11,12 @@ import Profile from './Profile'
 import Gallary from './Gallary'
 import ProductSection from './ProductSection'
 import GallaryCarousel from './GallaryCarousel'
+import Header from './Header'
+import SearchFilter from './SearchFilter'
+import Filters from './Filters'
+import Feetures from './Feetures'
+import SingleProduct from './SingleProduct'
+import ShopNavigations from './ShopNavigations'
 
 
 export {
@@ -25,4 +31,10 @@ export {
   ProductSection,
   Gallary,
   GallaryCarousel,
+  Header,
+  Filters,
+  SearchFilter,
+  Feetures,
+  SingleProduct,
+  ShopNavigations
 }

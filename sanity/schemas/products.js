@@ -9,6 +9,11 @@ const products = {
       type: 'string',
     },
     {
+      name: 'summary',
+      title: 'Summary',
+      type: 'string',
+    },
+    {
       name: 'subtitle',
       title: 'Subtitle',
       type: 'string'
@@ -47,16 +52,27 @@ const products = {
       title: 'Category',
       type: 'string',
       options: {
-        list: ['living', 'dining', 'bedroom']
+        list: ['sofas', 'tables', 'bookcases', 'beds', 'armchairs', 'chairs' ]
       }
     },
     {
+      name: 'tags',
+      title: 'Tags',
+      type: 'array',
+      of: [
+        {
+          name: 'tag',
+          title: 'Tag Name',
+          type: 'string'
+        }
+      ],
+    },
+    {
       name: 'image',
-      title: 'Product image',
-      type: 'image',
-      options: {
-        hotspot: true,
-      },
+      title: 'Image',
+      type: 'array',
+      of: [{type : 'image'}],
+      options: { hotspot: true }
     },
   ]
 }

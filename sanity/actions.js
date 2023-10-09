@@ -39,3 +39,41 @@ export const getUsers = async () => {
     console.log(error);
   }
 }
+
+export const getProducts = async (start, end) => {
+
+  try {
+    const products = await client.fetch(
+      groq`*[_type == "product"][${start}...${end}]{
+        _id,
+        title,
+        summary,
+        subtitle,
+        new,
+        discount,
+        description,
+        price,
+        slug,
+        category,
+        tags,
+        "images": image[].asset->url,
+      }`
+    );
+
+    return products;
+  } catch (error) {
+    console.log('failed');
+  }
+}
+export const getProductsCount = async (start, end) => {
+
+  try {
+    const productsCount = await client.fetch(
+      groq`count(*[_type == 'product']) `
+    );
+
+    return productsCount;
+  } catch (error) {
+    console.log('failed');
+  }
+}
