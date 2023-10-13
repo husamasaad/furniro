@@ -22,7 +22,7 @@ const LikesList =  ({ userId }) => {
 
   if (!likes) {
     return (
-      <p className='text-center body-semibold text-color-gray-3'>You haven't purchased any thing yet, Start Shopping...</p>
+      <p className='text-center body-semibold text-color-gray-3'>You haven't saved anything yet, your likes will be saved here...</p>
     )
   }
   
