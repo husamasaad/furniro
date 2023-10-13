@@ -35,11 +35,11 @@ const Menu = () => {
             </li>
             <li className='body-text text-font-clr p-8 flex gap-6 items-center'>
               <BiSupport className='text-4xl' />
-              <Link href='/' >Support</Link>
+              <Link href='/contact' >Support</Link>
             </li>
             <li className='body-text text-font-clr p-8 flex gap-6 items-center'>
                 <TiMessages className='text-4xl' />
-                <Link href='/'>Contact</Link>
+                <Link href='/contact'>Contact</Link>
             </li>
             <li onClick={() => {
               setActiveMenu(false)
@@ -50,7 +50,7 @@ const Menu = () => {
             </li>
             <li className='body-text text-font-clr p-8 flex gap-6 items-center'>
                 <RxMagnifyingGlass className='text-4xl' />
-                <Link href='/'>Search</Link>
+                <Link href='/shop#search'>Search</Link>
             </li>
         </ul>
       </div>
