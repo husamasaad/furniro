@@ -1,7 +1,7 @@
 'use client'
 
 import { loginFields } from '@/constants';
-import React, { useState } from 'react'
+import { useState } from 'react'
 import LoginInput from './LoginInput';
 import { signIn } from 'next-auth/react';
 import { redirect, useRouter } from 'next/navigation';
