@@ -255,6 +255,18 @@ export const getLiked = async (userId) => {
 
 }
 
+export const clearLikes = async (userId) => {
+  const userLikes = await client.fetch(
+    groq`*[_type == "liked" && user._ref == "${userId}"][0]`
+  )
+
+  if (userLikes) {
+    const result = await writeClient.patch(userLikes._id).set({ products: [] }).commit()
+
+    return result
+  }
+}
+
 export const getProduct = async (ProductId) => {
 
   const product = await client.fetch(

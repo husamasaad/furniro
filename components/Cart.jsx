@@ -36,7 +36,7 @@ const Cart = () => {
             <p className='text-primary body-semibold'>0</p>
           </div>
           <div className='border-t mt-5 pt-5 w-full flex-between px-8'>
-            <button className='border border-black py-2 px-6 rounded-full text-color-gray-1'>
+            <button type='button' onClick={() => setCartList([])} className='border border-black py-2 px-6 rounded-full text-color-gray-1'>
               clear
             </button>
             <CheckOutBtn />

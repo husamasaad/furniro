@@ -7,11 +7,50 @@ import LikesList from './LikesList'
 import { Link } from 'nextjs13-progress'
 import Skeleton from 'react-loading-skeleton'
 import 'react-loading-skeleton/dist/skeleton.css'
+import { clearLikes, getLiked, removeLikedProduct } from '@/sanity/actions'
+import { useEffect, useState } from 'react'
 
 const FavList = () => {
 
   const { setActiveFavList } = useStateContext()
   const { data: session, status } = useSession()
+
+  const [likes, setLikes] = useState([])
+
+  useEffect(() => {
+    const fetchLikes = async () => {
+      const fetchedLikes = await getLiked(session.user.id)
+      setLikes(fetchedLikes?.products)
+    }
+  
+    fetchLikes()
+  }, [])
+
+  const handleRemove = async (productId) => {
+    const result = await removeLikedProduct(productId, session.user.id)
+
+    if (result) {
+      setLikes(prevLikes => {
+        const updatedLikes = [...prevLikes];
+        const index = updatedLikes.findIndex((obj) => obj._ref === productId);
+    
+        if (index !== -1) {
+          updatedLikes.splice(index, 1);
+        }
+    
+        return updatedLikes;
+      });
+    }
+  }
+
+  const handleClear = async () => {
+    const result = await clearLikes(session.user.id)
+
+    if (result) {
+      setLikes([])
+    }
+    
+  }
 
   return (
     <>
@@ -29,7 +68,8 @@ const FavList = () => {
               status == 'loading' ? (
                 <Skeleton className='px-8' count={2} />
               ) :session ? (
-                <LikesList userId={session.user.id} />
+                <LikesList userId={session.user.id} likes={likes}
+                handleRemove={handleRemove} />
               ): (
                 <p className='text-center body-semibold text-color-gray-3'>You are not logged in <br /> sign in or create a new acount for free</p>
               ) 
@@ -53,7 +93,7 @@ const FavList = () => {
               </Link>
             )}
             {session ? (
-              <button type='button' onClick={() => {}} className='border border-black py-2 px-6 rounded-full text-color-gray-1'>
+              <button type='button' onClick={handleClear} className='border border-black py-2 px-6 rounded-full text-color-gray-1'>
                 Clear Saved
               </button>
             ) : (

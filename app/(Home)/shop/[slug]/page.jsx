@@ -29,8 +29,6 @@ const page = async ({ params: { slug } }) => {
 
   const related = products.filter(item => item.category === product.category).slice(0, 4)
 
-  console.log(related);
-
   return (
     <main className="overflow-hidden">
       <header className='x-paddings py-10 bg-[#F9F1E7]'>

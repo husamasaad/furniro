@@ -9,40 +9,11 @@ import LikeItem from "./LikeItem"
 export const revalidate = 10
 
 
-const LikesList =  ({ userId }) => {
+const LikesList =  ({ userId, likes, handleRemove }) => {
 
-  const [likes, setLikes] = useState([])
-
-
-  useEffect(() => {
-    const fetchLikes = async () => {
-      const fetchedLikes = await getLiked(userId)
-      setLikes(fetchedLikes?.products)
-    }
-  
-    fetchLikes()
-  }, [])
-
-  const handleRemove = async (productId) => {
-    const result = await removeLikedProduct(productId, userId)
-
-    if (result) {
-      setLikes(prevLikes => {
-        const updatedLikes = [...prevLikes];
-        const index = updatedLikes.findIndex((obj) => obj._ref === productId);
-    
-        if (index !== -1) {
-          updatedLikes.splice(index, 1);
-        }
-    
-        return updatedLikes;
-      });
-    }
-  }
-
-  if (!likes) {
+  if (likes?.length == 0) {
     return (
-      <p className='text-center body-semibold text-color-gray-3'>You haven't saved anything yet, your likes will be saved here...</p>
+      <p className='text-center body-semibold text-color-gray-3 px-8'>You haven't saved anything yet, your likes will be saved here...</p>
     )
   }
   
