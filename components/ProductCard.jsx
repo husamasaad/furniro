@@ -3,6 +3,7 @@ import Image from 'next/image'
 import { Link } from 'nextjs13-progress'
 import React from 'react'
 import { RxHeart } from 'react-icons/rx'
+import LikeBtn from './LikeBtn'
 
 const ProductCard = ({ product }) => {
 
@@ -26,9 +27,7 @@ const ProductCard = ({ product }) => {
         <Link href={`/shop/${product.slug.current}`} className='btn-fill-white hover:btn-fill h-fit transition-all'>
           View Product
         </Link>
-        <button className='custom-btn text-white gap-2 hover:underline transition-all'>
-          <RxHeart /> Like
-        </button>
+        <LikeBtn productId={product._id} btnStyles="custom-btn text-white gap-2 hover:underline transition-all" />
       </div>
     </div>
   )

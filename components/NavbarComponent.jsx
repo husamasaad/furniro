@@ -1,11 +1,12 @@
-'use client';
-
 import Image from 'next/image';
 import { Link } from 'nextjs13-progress';
 import NavbarButtons from './NavbarButtons';
+import { getLiked } from '@/sanity/actions';
+import { getSession } from 'next-auth/react'
 
 
-const NavbarComponent = () => {
+const NavbarComponent = async () => {
+
   return (
     <nav className='bg-white x-paddings py-8'>
       <div className="flex-between flex-wrap gap-y-6 mx-auto">

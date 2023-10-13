@@ -1,4 +1,4 @@
-import { SingleProduct } from '@/components'
+import { RelatedProduct, SingleProduct } from '@/components'
 import { ourProducts } from '@/constants'
 import { getProduct, getProducts, getProductsCount } from '@/sanity/actions'
 import { Link } from 'nextjs13-progress'
@@ -27,6 +27,9 @@ const page = async ({ params: { slug } }) => {
 
   const product = products.find(product => product.slug.current === slug)
 
+  const related = products.filter(item => item.category === product.category).slice(0, 4)
+
+  console.log(related);
 
   return (
     <main className="overflow-hidden">
@@ -46,6 +49,11 @@ const page = async ({ params: { slug } }) => {
         </div>
       </header>
       <SingleProduct product={product} />
+      <section className='paddings border-y'>
+        <h2 className='text-center text-[20px] leading-[26px] text-color-gray-1 font-semibold mb-10'>Descritpion</h2>
+        <p className='max-w-[1024px] mx-auto text-[16px] leading-[26px] text-[#9F9F9F]'>{product.description}</p>
+      </section>
+      <RelatedProduct related={related} />
     </main>
   )
 }

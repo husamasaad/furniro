@@ -14,7 +14,7 @@ export const options = {
           placeholder: "Your Email is: "
         },
         password: {
-          label: "Password:",
+          label: "password:",
           type: 'password',
           placeholder: "Your password is: "
         },
@@ -38,8 +38,7 @@ export const options = {
       // Persist the OAuth access_token and or the user id to the token right after signin
       if (account) {
         token.accessToken = account.access_token
-        token.id = user.id
-        token.name = user.username || undefined
+        token.id = user._id
         token.name = user.username || undefined
       }
       return token
@@ -52,5 +51,9 @@ export const options = {
 
       return session
     }
-  }
+  },
+  pages: {
+    signIn: "/auth/signIn",
+    newUser: '/auth/signUp'
+  },
 }

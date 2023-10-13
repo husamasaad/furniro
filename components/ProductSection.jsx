@@ -8,7 +8,7 @@ import Products from './Products'
 const ProductSection = () => {
   return (
     <section className='paddings'>
-      <h2 className='heading3 text-center text-color-gray-1'>Our Products</h2>
+      <h2 className='heading3 text-center text-color-gray-1'>Our Latest Products</h2>
       <Products rangeStart={0} rangeEnd={8} />
       <div className='mt-6'>
         <Link href="/" className="btn-outline hover:btn-fill focus:btn-fill no-focus  w-fit mx-auto">Show More</Link>

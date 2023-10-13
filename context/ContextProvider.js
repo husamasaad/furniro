@@ -10,20 +10,27 @@ export const ContextProvider = ({ children }) => {
 
   const [activeMenu, setActiveMenu] = useState(false);
   const [activeCart, setActiveCart] = useState(false);
-  const [activeProfile, setActiveProfile] = useState(false);
   const [activeFavList, setActiveFavList] = useState(false);
+  const [currentPage, setCurrentPage] = useState(1)
+
+  const [cartList, setCartList] = useState([])
+  const [likesList, setLikesList] = useState([])
   
   return (
     <StateContext.Provider
       value={{
         activeMenu,
         activeCart,
-        activeProfile,
         activeFavList,
         setActiveMenu,
         setActiveCart,
-        setActiveProfile,
-        setActiveFavList
+        setActiveFavList,
+        currentPage,
+        setCurrentPage,
+        cartList,
+        setCartList,
+        likesList,
+        setLikesList
       }}
     >
       {children}

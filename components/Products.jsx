@@ -6,11 +6,13 @@ import ProductCard from './ProductCard'
 import { getProducts, getProductsCount } from '@/sanity/actions'
 import ShopNavigations from './ShopNavigations'
 
-const Products = async ({ rangeStart, rangeEnd }) => {
+export const revalidate = 90
 
-  const products = await getProducts(rangeStart, rangeEnd)
+const Products = async ({ rangeStart, rangeEnd, searchParams }) => {
 
-  const count = await getProductsCount()
+  const products = await getProducts(rangeStart, rangeEnd, searchParams)
+
+  const count = await getProductsCount(searchParams)
 
   const pages = Array.from({ length: Math.ceil(count / 16) }, (_, index) => index + 1);
   
@@ -19,7 +21,7 @@ const Products = async ({ rangeStart, rangeEnd }) => {
     <>
       <div className='flex justify-center items-center flex-wrap gap-x-6 gap-y-16 py-12 mt-10'>
         {
-          products.map(product => (
+          products?.map(product => (
             <ProductCard key={product._id} product={product} />
           ))
         }

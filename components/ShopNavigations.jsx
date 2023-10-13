@@ -2,13 +2,14 @@
 
 import React, { useState } from 'react'
 import { useRouter } from 'next/navigation'
+import { useStateContext } from '@/context/ContextProvider'
 
 const ShopNavigations = ({pagesCount}) => {
 
   const router = useRouter()
 
 
-  const [currentPage, setCurrentPage] = useState(1)
+  const {currentPage, setCurrentPage} = useStateContext()
 
   const handleClick = (current) => {
     setCurrentPage(current)
@@ -28,6 +29,7 @@ const ShopNavigations = ({pagesCount}) => {
         <button
           className={`btn-navigation ${page == currentPage ? '!bg-primary !text-white' : ''}`}
           onClick={() => handleClick(page)}
+          key={page}
         >
           {page}
         </button>

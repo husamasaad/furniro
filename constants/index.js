@@ -153,3 +153,108 @@ export const featuresList = [
     imageUrl: '/support-icon.png'
   },
 ]
+
+export const loginFields=[
+  {
+      labelText:"Email address",
+      labelFor:"email-address",
+      id:"email",
+      name:"email",
+      type:"email",
+      autoComplete:"email",
+      isRequired:true,
+      placeholder:"Email address"   
+  },
+  {
+      labelText:"Password",
+      labelFor:"password",
+      id:"password",
+      name:"password",
+      type:"password",
+      autoComplete:"current-password",
+      isRequired:true,
+      placeholder:"Password"   
+  }
+]
+
+export const signupFields=[
+  {
+      labelText:"Username",
+      labelFor:"username",
+      id:"username",
+      name:"username",
+      type:"text",
+      autoComplete:"username",
+      isRequired:true,
+      placeholder:"Username"   
+  },
+  {
+      labelText:"Email address",
+      labelFor:"email-address",
+      id:"email",
+      name:"email",
+      type:"email",
+      autoComplete:"email",
+      isRequired:true,
+      placeholder:"Email address"   
+  },
+  {
+      labelText:"Password",
+      labelFor:"password",
+      id:"password",
+      name:"password",
+      type:"password",
+      autoComplete:"current-password",
+      isRequired:true,
+      placeholder:"Password"   
+  }
+]
+
+
+export const checkoutFormData = [
+  {
+    labelText:"Streat address",
+    labelFor:"streat",
+    id:"streat",
+    name:"streat",
+    type:"text",
+    isRequired: true,
+    placeholder:""   
+  },
+  {
+    labelText:"Town / City",
+    labelFor:"town",
+    id:"town",
+    name:"town",
+    type:"text",
+    isRequired: true,
+    placeholder:""   
+  },
+  {
+    labelText:"phone",
+    labelFor:"phone",
+    id:"phone",
+    name:"phone",
+    type:"text",
+    isRequired: true,
+    placeholder:""   
+  },
+  {
+    labelText:"email address",
+    labelFor:"email",
+    id:"email",
+    name:"email",
+    type:"text",
+    isRequired: true,
+    placeholder:""   
+  },
+  {
+    labelText:"Additional Information",
+    labelFor:"info",
+    id:"info",
+    name:"info",
+    type:"text",
+    isRequired: true,
+    placeholder:"this is optional"   
+  },
+]

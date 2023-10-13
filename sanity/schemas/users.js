@@ -1,5 +1,3 @@
-import products from "./products"
-
 const users = {
   name: 'users',
   title: 'Users',
@@ -20,29 +18,6 @@ const users = {
       title: 'Email',
       type: 'string',
     },
-    {
-      name: 'history',
-      title: 'Purchase History',
-      type: 'array',
-      of: [
-        {
-          name: 'purchased products',
-          type: 'document',
-          fields: [
-            {
-              name: 'productTitle',
-              title: 'Product Title',
-              type: 'string'
-            },
-            {
-              name: 'productIds',
-              title: 'Product Id',
-              type: 'string'
-            }
-          ]
-        }
-      ],
-    }
   ]
 }
 
