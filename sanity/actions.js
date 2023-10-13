@@ -228,6 +228,23 @@ export const addLiked = async (userId, productId) => {
 
 }
 
+export const removeLikedProduct = async (productId, userId) => {
+  const userLikes = await client.fetch(
+    groq`*[_type == "liked" && user._ref == "${userId}"][0]`
+  )
+
+  if (userLikes) {
+    const productIndex = userLikes.products.findIndex(product => product._ref === productId);
+
+    if (productIndex !== -1) {
+
+      const result = writeClient.patch(userLikes._id).unset([`products[${productIndex}]`]).commit()
+
+      return result
+    }
+  }
+}
+
 export const getLiked = async (userId) => {
 
   const userLikes = await client.fetch(

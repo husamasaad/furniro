@@ -1,10 +1,10 @@
 'use client'
 
-import { getProduct } from '@/sanity/actions'
+import { getProduct, removeLikedProduct } from '@/sanity/actions'
 import Image from 'next/image'
 import React, { useEffect, useState } from 'react'
 
-const LikeItem = ({ productId }) => {
+const LikeItem = ({ productId, handleRemove }) => {
 
 
   const [product, setProduct] = useState()
@@ -19,19 +19,7 @@ const LikeItem = ({ productId }) => {
     fetchProduct()
   }, [])
 
-  const handleRemove = () => {
 
-  }
-
-  console.log(product);
-
-  if (product === 'loading') {
-    return (
-      <div>
-        Loading...
-      </div>
-    )
-  }
 
   return (
     <div className="flex-between w-full px-8">
@@ -51,7 +39,7 @@ const LikeItem = ({ productId }) => {
             </div>
           </div>
         </div>
-        <button type="button" onClick={handleRemove}>
+        <button type="button" onClick={() => handleRemove(product._id)}>
           <Image src="/delete-icon.svg" alt="close" width={28} height={28} />
         </button>
       </div>

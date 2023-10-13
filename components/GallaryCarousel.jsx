@@ -24,7 +24,7 @@ const GallaryCarousel = ({ images }) => {
   return (
     <div className='flex-[1.5] w-full min-h-[582px] relative'>
       <div className='mx-auto flex-center md:flex-start relative h-[582px] z-10'>
-        <Image alt="image" width={404} height={582} src={images[currentImageIndex].image} className='object-fill h-[582px] drop-shadow-2xl' />
+        <Image priority alt="image" width={404} height={582} src={images[currentImageIndex].image} className='object-fill h-[582px] drop-shadow-2xl' />
         <div className='absolute left-1/2 -translate-x-1/2 md:left-10 md:translate-x-0 bottom-10 p-4 md:p-12 bg-white/70'>
           <span className='text-sm md:small-regular text-color-gray-2 font-semibold'>
             0{currentImageIndex + 1} — {images[currentImageIndex].tag}

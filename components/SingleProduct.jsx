@@ -25,7 +25,7 @@ const SingleProduct = ({ product }) => {
             <div className='flex gap-4 fllex-wrap items-center my-12'>
               <p className='text-[20px] leading-[26px] text-[#9F9F9F]'>Tags :</p>
               <span className='flex gap-4 flex-wrap items-center'>
-                {product.tags.map((tag) => <Link href='#' key={tag} className=' py-1/2 px-3 rounded-full drop-shadow-lg border hover:bg-primary hover:text-white mt-1'>{tag}</Link>)}</span>
+                {product.tags.map((tag) => <Link href={`/shop?tags=${tag}`} key={tag} className=' py-1/2 px-3 rounded-full drop-shadow-lg border hover:bg-primary hover:text-white mt-1'>{tag}</Link>)}</span>
             </div>
           </div>
           <ProductCta product={product} />
