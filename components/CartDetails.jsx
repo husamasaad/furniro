@@ -19,7 +19,7 @@ const payMethods = [
 
 ]
 
-const CartDetails = ({ cartList, method, setMethod, totalPrice, handleDone }) => {
+const CartDetails = ({ cartList, method, setMethod, total, handleDone }) => {
 
   return (
     <div className='flex-1 w-full md:pt-16'>

@@ -19,8 +19,8 @@ const ProductCard = ({ product }) => {
       <div className='p-8 bg-light-bg text-left'>
         <h4 className='heading4 text-color-gray-1'>{product.title.split('|')[1]}</h4>
         <p className='small-regular text-color-gray-3 my-3 truncate'>{product.subtitle}</p>
-        <p className='w-full flex-between'>Rp {product.price} {product.discount > 0 ? (
-          <span className='small-regular text-color-gray-5 line-through'>Rp {product.price / product.discount}</span>
+        <p className='w-full flex-between'>${product.price} {product.discount > 0 ? (
+          <span className='small-regular text-color-gray-5 line-through'>${product.price / product.discount}</span>
         ) : ''}</p>
       </div>
       <div className='hidden transition-all absolute inset-0 w-full h-full group-hover:flex-center group-focus:flex-center flex-col bg-black/30 gap-4 no-focus'>
