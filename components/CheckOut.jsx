@@ -37,7 +37,6 @@ const CheckOut = () => {
       { key: 'firstName', label: 'First Name' },
       { key: 'lastName', label: 'Last Name' },
       { key: 'email', label: 'Email' },
-      { key: 'code', label: 'Zip Code' },
       { key: 'phone', label: 'Phone Number' },
       { key: 'streat', label: 'Street Address' },
       { key: 'town', label: 'Town / City' },
